@@ -20,8 +20,8 @@ if start == "Y":
     if state == "CA":
         state_tax = total * 0.0825
 
-    state_tax = str(round(state_tax, 2))
-    print("State tax is $" + str(state_tax))
+    tax = str(round(state_tax, 2))
+    print("State tax is $" + str(tax))
 
     #Check discount
     if total <= 999:
@@ -37,10 +37,11 @@ if start == "Y":
     else:
         discount = total * 0.15
 
-    discount = str(round(discount, 2))
-    print("Order discount is $" + str(discount))
-    order_value = total + state_tax - discount
-    #print("Your total order value is " + str(order_value))
+    disc = str(round(discount, 2))
+    print("Order discount is $" + str(disc))
+    order_value = total +state_tax - discount
+    order_value = str(round(order_value, 2))
+    print("Your total order value is $" + str(order_value))
 else:
     print("Have a good day")
     
